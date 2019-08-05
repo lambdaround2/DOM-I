@@ -52,6 +52,18 @@ anchorTags.forEach((aTag, index) => {
     siteContent["nav"][`nav-item-${index + 1}`]);
 });
 
+anchorTags.forEach(aTag => (aTag.style.color = "green"));
+
+let navBar = document.querySelector("nav");
+let newFirstATag = document.createElement("a");
+let newLastATag = document.createElement("a");
+
+newFirstATag.textContent = "Buy things!";
+newLastATag.textContent = "Delete Everything!";
+
+navBar.prepend(newFirstATag);
+navBar.append(newLastATag);
+
 let mainHeading = document.querySelector("h1");
 mainHeading.textContent = siteContent["cta"]["h1"];
 
